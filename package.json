@@ -3,16 +3,21 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@types/chart.js": "^2.7.56",
     "@types/jest": "24.0.17",
     "@types/node": "12.7.1",
     "@types/react": "16.9.1",
     "@types/react-dom": "16.8.5",
+    "gh-pages": "^2.1.1",
     "react": "^16.9.0",
+    "react-chartjs-2": "^2.7.6",
     "react-dom": "^16.9.0",
     "react-scripts": "3.1.0",
     "typescript": "3.5.3"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -32,5 +37,6 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "homepage": "https://snerks.github.io/football-stats-03"
 }
