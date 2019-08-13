@@ -34,6 +34,10 @@ class PointsLineChart extends React.Component<
     const purpleLineColour = `rgba(${purpleRgba}, 1)`;
     const purpleLegendFillColour = `rgba(${purpleRgba}, 0.4)`;
 
+    const slateBlueRgba = "0, 100, 0";
+    const slateBlueLineColour = `rgba(${slateBlueRgba}, 1)`;
+    const slateBlueLegendFillColour = `rgba(${slateBlueRgba}, 0.4)`;
+
     const greyRgba = "220, 220, 220";
     const greyLineColour = `rgba(${greyRgba}, 1)`;
     // const greyLegendFillColour = `rgba(${greyRgba}, 0.4)`;
@@ -50,24 +54,6 @@ class PointsLineChart extends React.Component<
     const orangeRgba = "255, 165, 0";
     const orangeLineColour = `rgba(${orangeRgba}, 1)`;
     const orangeLegendFillColour = `rgba(${orangeRgba}, 0.4)`;
-
-    // const showTrendLines = true;
-
-    // const dataPointCount = 40;
-
-    // const labels: string[] = [];
-
-    // for (let index = 0; index < dataPointCount; index++) {
-    //   const gameNumber = index + 1;
-
-    //   // const element = (index + 1) % 5 === 0 ? (index + 1).toString(10) : "";
-    //   const element =
-    //     gameNumber % 5 === 0 || gameNumber === 1 || gameNumber === 23
-    //       ? gameNumber.toString(10)
-    //       : "";
-
-    //   labels.push(element);
-    // }
 
     const points2016: number[] = [
       0,
@@ -270,69 +256,6 @@ class PointsLineChart extends React.Component<
       pointsRunning2019.push(nextElement);
     }
 
-    // const pointsCalendar2018: number[] = [
-    //   0, // 1 Jan 2018
-    //   0,
-    //   1,
-    //   3,
-    //   0, // 2 Feb 2018
-    //   1,
-    //   1,
-    //   1,
-    //   0,
-    //   3,
-    //   0,
-    //   1,
-    //   3,
-    //   1,
-    //   0, // 2 Apr 2018
-    //   0,
-    //   3,
-    //   0,
-    //   1,
-    //   1,
-    //   0,
-
-    //   1,
-    //   1,
-    //   0,
-    //   3,
-    //   3,
-    //   3,
-    //   3,
-    //   0,
-    //   0,
-    //   1, // 28 Sep
-    //   1,
-    //   0,
-    //   3,
-    //   3,
-    //   0,
-    //   0, // 03 Nov
-    //   0,
-    //   0,
-    //   3,
-    //   1,
-    //   3, // 08 Dec
-    //   1,
-    //   1,
-    //   1,
-    //   3 // 29 Dec
-    // ];
-
-    // const pointsRunningCalendar2018: number[] = [];
-
-    // for (let index = 0; index < pointsCalendar2018.length; index++) {
-    //   const runningTotal =
-    //     index === 0 ? 0 : pointsRunningCalendar2018[index - 1];
-
-    //   const nextElement = runningTotal + pointsCalendar2018[index];
-
-    //   pointsRunningCalendar2018.push(nextElement);
-    // }
-
-    // const dataPointCount = pointsCalendar2018.length;
-
     const dataPointCount = pointsRunning2018.length;
 
     const labels: string[] = [];
@@ -411,17 +334,17 @@ class PointsLineChart extends React.Component<
           label: "2018-",
           fill: false,
           lineTension: 0.1,
-          backgroundColor: orangeLegendFillColour,
-          borderColor: orangeLineColour,
+          backgroundColor: slateBlueLegendFillColour,
+          borderColor: slateBlueLineColour,
           borderCapStyle: "butt",
           borderDash: [3, 3],
           borderDashOffset: 0.0,
           borderJoinStyle: "miter",
-          pointBorderColor: orangeLineColour,
+          pointBorderColor: slateBlueLineColour,
           pointBackgroundColor: "#fff",
           pointBorderWidth: 1,
           pointHoverRadius: 5,
-          pointHoverBackgroundColor: orangeLineColour,
+          pointHoverBackgroundColor: slateBlueLineColour,
           pointHoverBorderColor: greyLineColour,
           pointHoverBorderWidth: 2,
           pointRadius: 1,
