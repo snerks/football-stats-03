@@ -7,18 +7,66 @@ export interface PointsLineChartProps {}
 
 export interface PointsLineChartState {
   showTrendLines: boolean;
+
+  show2016: boolean;
+  show2017: boolean;
+  show2018: boolean;
+  show2019: boolean;
 }
 
 class PointsLineChart extends React.Component<
   PointsLineChartProps,
   PointsLineChartState
 > {
-  state = { showTrendLines: false };
+  state = {
+    showTrendLines: false,
+
+    show2016: false,
+    show2017: false,
+    show2018: true,
+    show2019: true
+  };
 
   handleShowTrendLines = () => {
     this.setState(prevState => {
       const nextState = { ...prevState };
       nextState.showTrendLines = !prevState.showTrendLines;
+
+      return nextState;
+    });
+  };
+
+  handleShow2016 = () => {
+    this.setState(prevState => {
+      const nextState = { ...prevState };
+      nextState.show2016 = !prevState.show2016;
+
+      return nextState;
+    });
+  };
+
+  handleShow2017 = () => {
+    this.setState(prevState => {
+      const nextState = { ...prevState };
+      nextState.show2017 = !prevState.show2017;
+
+      return nextState;
+    });
+  };
+
+  handleShow2018 = () => {
+    this.setState(prevState => {
+      const nextState = { ...prevState };
+      nextState.show2018 = !prevState.show2018;
+
+      return nextState;
+    });
+  };
+
+  handleShow2019 = () => {
+    this.setState(prevState => {
+      const nextState = { ...prevState };
+      nextState.show2019 = !prevState.show2019;
 
       return nextState;
     });
@@ -286,94 +334,90 @@ class PointsLineChart extends React.Component<
       labels: labels,
 
       datasets: [
-        {
-          label: "2016-",
-          fill: false,
-          lineTension: 0.1,
-
-          backgroundColor: aliceBlueLegendFillColour,
-          borderColor: aliceBlueLineColour,
-
-          borderCapStyle: "butt",
-          borderDash: [3, 3],
-          borderDashOffset: 0.0,
-          borderJoinStyle: "miter",
-          pointBorderColor: aliceBlueLineColour,
-          pointBackgroundColor: "#fff",
-          pointBorderWidth: 1,
-          pointHoverRadius: 5,
-          pointHoverBackgroundColor: aliceBlueLineColour,
-          pointHoverBorderColor: greyLineColour,
-          pointHoverBorderWidth: 2,
-          pointRadius: 1,
-          pointHitRadius: 10,
-          data: pointsRunning2016
-        },
-        {
-          label: "2017-",
-          fill: false,
-          lineTension: 0.1,
-
-          backgroundColor: purpleLegendFillColour,
-          borderColor: purpleLineColour,
-
-          borderCapStyle: "butt",
-          borderDash: [3, 3],
-          borderDashOffset: 0.0,
-          borderJoinStyle: "miter",
-          pointBorderColor: purpleLineColour,
-          pointBackgroundColor: "#fff",
-          pointBorderWidth: 1,
-          pointHoverRadius: 5,
-          pointHoverBackgroundColor: purpleLineColour,
-          pointHoverBorderColor: greyLineColour,
-          pointHoverBorderWidth: 2,
-          pointRadius: 1,
-          pointHitRadius: 10,
-          data: pointsRunning2017
-        },
-        {
-          label: "2018-",
-          fill: false,
-          lineTension: 0.1,
-          backgroundColor: slateBlueLegendFillColour,
-          borderColor: slateBlueLineColour,
-          borderCapStyle: "butt",
-          borderDash: [3, 3],
-          borderDashOffset: 0.0,
-          borderJoinStyle: "miter",
-          pointBorderColor: slateBlueLineColour,
-          pointBackgroundColor: "#fff",
-          pointBorderWidth: 1,
-          pointHoverRadius: 5,
-          pointHoverBackgroundColor: slateBlueLineColour,
-          pointHoverBorderColor: greyLineColour,
-          pointHoverBorderWidth: 2,
-          pointRadius: 1,
-          pointHitRadius: 10,
-          data: pointsRunning2018
-        },
-        {
-          label: "2019-",
-          fill: false,
-          lineTension: 0.1,
-          backgroundColor: redLegendFillColour,
-          borderColor: redLineColour,
-          borderCapStyle: "butt",
-          borderDash: [],
-          borderDashOffset: 0.0,
-          borderJoinStyle: "miter",
-          pointBorderColor: redLineColour,
-          pointBackgroundColor: "#fff",
-          pointBorderWidth: 1,
-          pointHoverRadius: 5,
-          pointHoverBackgroundColor: redLineColour,
-          pointHoverBorderColor: greyLineColour,
-          pointHoverBorderWidth: 2,
-          pointRadius: 1,
-          pointHitRadius: 10,
-          data: pointsRunning2019
-        }
+        // {
+        //   label: "2016-",
+        //   fill: false,
+        //   lineTension: 0.1,
+        //   backgroundColor: aliceBlueLegendFillColour,
+        //   borderColor: aliceBlueLineColour,
+        //   borderCapStyle: "butt",
+        //   borderDash: [3, 3],
+        //   borderDashOffset: 0.0,
+        //   borderJoinStyle: "miter",
+        //   pointBorderColor: aliceBlueLineColour,
+        //   pointBackgroundColor: "#fff",
+        //   pointBorderWidth: 1,
+        //   pointHoverRadius: 5,
+        //   pointHoverBackgroundColor: aliceBlueLineColour,
+        //   pointHoverBorderColor: greyLineColour,
+        //   pointHoverBorderWidth: 2,
+        //   pointRadius: 1,
+        //   pointHitRadius: 10,
+        //   data: pointsRunning2016
+        // },
+        // {
+        //   label: "2017-",
+        //   fill: false,
+        //   lineTension: 0.1,
+        //   backgroundColor: purpleLegendFillColour,
+        //   borderColor: purpleLineColour,
+        //   borderCapStyle: "butt",
+        //   borderDash: [3, 3],
+        //   borderDashOffset: 0.0,
+        //   borderJoinStyle: "miter",
+        //   pointBorderColor: purpleLineColour,
+        //   pointBackgroundColor: "#fff",
+        //   pointBorderWidth: 1,
+        //   pointHoverRadius: 5,
+        //   pointHoverBackgroundColor: purpleLineColour,
+        //   pointHoverBorderColor: greyLineColour,
+        //   pointHoverBorderWidth: 2,
+        //   pointRadius: 1,
+        //   pointHitRadius: 10,
+        //   data: pointsRunning2017
+        // },
+        // {
+        //   label: "2018-",
+        //   fill: false,
+        //   lineTension: 0.1,
+        //   backgroundColor: slateBlueLegendFillColour,
+        //   borderColor: slateBlueLineColour,
+        //   borderCapStyle: "butt",
+        //   borderDash: [3, 3],
+        //   borderDashOffset: 0.0,
+        //   borderJoinStyle: "miter",
+        //   pointBorderColor: slateBlueLineColour,
+        //   pointBackgroundColor: "#fff",
+        //   pointBorderWidth: 1,
+        //   pointHoverRadius: 5,
+        //   pointHoverBackgroundColor: slateBlueLineColour,
+        //   pointHoverBorderColor: greyLineColour,
+        //   pointHoverBorderWidth: 2,
+        //   pointRadius: 1,
+        //   pointHitRadius: 10,
+        //   data: pointsRunning2018
+        // },
+        // {
+        //   label: "2019-",
+        //   fill: false,
+        //   lineTension: 0.1,
+        //   backgroundColor: redLegendFillColour,
+        //   borderColor: redLineColour,
+        //   borderCapStyle: "butt",
+        //   borderDash: [],
+        //   borderDashOffset: 0.0,
+        //   borderJoinStyle: "miter",
+        //   pointBorderColor: redLineColour,
+        //   pointBackgroundColor: "#fff",
+        //   pointBorderWidth: 1,
+        //   pointHoverRadius: 5,
+        //   pointHoverBackgroundColor: redLineColour,
+        //   pointHoverBorderColor: greyLineColour,
+        //   pointHoverBorderWidth: 2,
+        //   pointRadius: 1,
+        //   pointHitRadius: 10,
+        //   data: pointsRunning2019
+        // }
         // ,
         // {
         //   label: "2018",
@@ -399,6 +443,114 @@ class PointsLineChart extends React.Component<
         // }
       ]
     };
+
+    if (this.state.show2016) {
+      if (chartData.datasets) {
+        chartData.datasets.push({
+          label: "2016-",
+          fill: false,
+          lineTension: 0.1,
+
+          backgroundColor: aliceBlueLegendFillColour,
+          borderColor: aliceBlueLineColour,
+
+          borderCapStyle: "butt",
+          borderDash: [3, 3],
+          borderDashOffset: 0.0,
+          borderJoinStyle: "miter",
+          pointBorderColor: aliceBlueLineColour,
+          pointBackgroundColor: "#fff",
+          pointBorderWidth: 1,
+          pointHoverRadius: 5,
+          pointHoverBackgroundColor: aliceBlueLineColour,
+          pointHoverBorderColor: greyLineColour,
+          pointHoverBorderWidth: 2,
+          pointRadius: 1,
+          pointHitRadius: 10,
+          data: pointsRunning2016
+        });
+      }
+    }
+
+    if (this.state.show2017) {
+      if (chartData.datasets) {
+        chartData.datasets.push({
+          label: "2017-",
+          fill: false,
+          lineTension: 0.1,
+
+          backgroundColor: purpleLegendFillColour,
+          borderColor: purpleLineColour,
+
+          borderCapStyle: "butt",
+          borderDash: [3, 3],
+          borderDashOffset: 0.0,
+          borderJoinStyle: "miter",
+          pointBorderColor: purpleLineColour,
+          pointBackgroundColor: "#fff",
+          pointBorderWidth: 1,
+          pointHoverRadius: 5,
+          pointHoverBackgroundColor: purpleLineColour,
+          pointHoverBorderColor: greyLineColour,
+          pointHoverBorderWidth: 2,
+          pointRadius: 1,
+          pointHitRadius: 10,
+          data: pointsRunning2017
+        });
+      }
+    }
+
+    if (this.state.show2018) {
+      if (chartData.datasets) {
+        chartData.datasets.push({
+          label: "2018-",
+          fill: false,
+          lineTension: 0.1,
+          backgroundColor: slateBlueLegendFillColour,
+          borderColor: slateBlueLineColour,
+          borderCapStyle: "butt",
+          borderDash: [3, 3],
+          borderDashOffset: 0.0,
+          borderJoinStyle: "miter",
+          pointBorderColor: slateBlueLineColour,
+          pointBackgroundColor: "#fff",
+          pointBorderWidth: 1,
+          pointHoverRadius: 5,
+          pointHoverBackgroundColor: slateBlueLineColour,
+          pointHoverBorderColor: greyLineColour,
+          pointHoverBorderWidth: 2,
+          pointRadius: 1,
+          pointHitRadius: 10,
+          data: pointsRunning2018
+        });
+      }
+    }
+
+    if (this.state.show2019) {
+      if (chartData.datasets) {
+        chartData.datasets.push({
+          label: "2019-",
+          fill: false,
+          lineTension: 0.1,
+          backgroundColor: redLegendFillColour,
+          borderColor: redLineColour,
+          borderCapStyle: "butt",
+          borderDash: [],
+          borderDashOffset: 0.0,
+          borderJoinStyle: "miter",
+          pointBorderColor: redLineColour,
+          pointBackgroundColor: "#fff",
+          pointBorderWidth: 1,
+          pointHoverRadius: 5,
+          pointHoverBackgroundColor: redLineColour,
+          pointHoverBorderColor: greyLineColour,
+          pointHoverBorderWidth: 2,
+          pointRadius: 1,
+          pointHitRadius: 10,
+          data: pointsRunning2019
+        });
+      }
+    }
 
     if (this.state.showTrendLines) {
       const playoffFormValues: number[] = [];
@@ -510,7 +662,52 @@ class PointsLineChart extends React.Component<
           <label className="custom-control-label" htmlFor="customCheck1">
             Show Trend Lines
           </label>
+          <input
+            type="checkbox"
+            className="custom-control-input"
+            id="show2016Checkbox"
+            onChange={() => this.handleShow2016()}
+            style={{ marginLeft: "10px" }}
+            checked={this.state.show2016}
+          />
+          <label className="custom-control-label" htmlFor="show2016Checkbox">
+            Show 2016-
+          </label>{" "}
+          <input
+            type="checkbox"
+            className="custom-control-input"
+            id="show2017Checkbox"
+            onChange={() => this.handleShow2017()}
+            style={{ marginLeft: "10px" }}
+            checked={this.state.show2017}
+          />
+          <label className="custom-control-label" htmlFor="show2017Checkbox">
+            Show 2017-
+          </label>{" "}
+          <input
+            type="checkbox"
+            className="custom-control-input"
+            id="show2018Checkbox"
+            onChange={() => this.handleShow2018()}
+            style={{ marginLeft: "10px" }}
+            checked={this.state.show2018}
+          />
+          <label className="custom-control-label" htmlFor="show2018Checkbox">
+            Show 2018-
+          </label>{" "}
+          <input
+            type="checkbox"
+            className="custom-control-input"
+            id="show2019Checkbox"
+            onChange={() => this.handleShow2019()}
+            style={{ marginLeft: "10px" }}
+            checked={this.state.show2019}
+          />
+          <label className="custom-control-label" htmlFor="show2019Checkbox">
+            Show 2019-
+          </label>{" "}
         </div>
+
         <Line
           data={chartData}
           options={chartOptions}
