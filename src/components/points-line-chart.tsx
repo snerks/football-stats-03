@@ -244,6 +244,7 @@ class PointsLineChart extends React.Component<
       0, // Dummy 0th result
       0,
       1,
+      3,
       3
     ];
 
