@@ -316,10 +316,11 @@ class PointsLineChart extends React.Component<
 
       // const element = (index + 1) % 5 === 0 ? (index + 1).toString(10) : "";
       const element =
-        gameNumber % 5 === 0 ||
-        gameNumber === 1 ||
-        gameNumber === 23 ||
-        gameNumber === 46
+        (gameNumber % 5 === 0 ||
+          gameNumber === 1 ||
+          gameNumber === 23 ||
+          gameNumber === 46) &&
+        gameNumber !== 45
           ? gameNumber.toString(10)
           : "";
 
@@ -333,115 +334,7 @@ class PointsLineChart extends React.Component<
 
       labels: labels,
 
-      datasets: [
-        // {
-        //   label: "2016-",
-        //   fill: false,
-        //   lineTension: 0.1,
-        //   backgroundColor: aliceBlueLegendFillColour,
-        //   borderColor: aliceBlueLineColour,
-        //   borderCapStyle: "butt",
-        //   borderDash: [3, 3],
-        //   borderDashOffset: 0.0,
-        //   borderJoinStyle: "miter",
-        //   pointBorderColor: aliceBlueLineColour,
-        //   pointBackgroundColor: "#fff",
-        //   pointBorderWidth: 1,
-        //   pointHoverRadius: 5,
-        //   pointHoverBackgroundColor: aliceBlueLineColour,
-        //   pointHoverBorderColor: greyLineColour,
-        //   pointHoverBorderWidth: 2,
-        //   pointRadius: 1,
-        //   pointHitRadius: 10,
-        //   data: pointsRunning2016
-        // },
-        // {
-        //   label: "2017-",
-        //   fill: false,
-        //   lineTension: 0.1,
-        //   backgroundColor: purpleLegendFillColour,
-        //   borderColor: purpleLineColour,
-        //   borderCapStyle: "butt",
-        //   borderDash: [3, 3],
-        //   borderDashOffset: 0.0,
-        //   borderJoinStyle: "miter",
-        //   pointBorderColor: purpleLineColour,
-        //   pointBackgroundColor: "#fff",
-        //   pointBorderWidth: 1,
-        //   pointHoverRadius: 5,
-        //   pointHoverBackgroundColor: purpleLineColour,
-        //   pointHoverBorderColor: greyLineColour,
-        //   pointHoverBorderWidth: 2,
-        //   pointRadius: 1,
-        //   pointHitRadius: 10,
-        //   data: pointsRunning2017
-        // },
-        // {
-        //   label: "2018-",
-        //   fill: false,
-        //   lineTension: 0.1,
-        //   backgroundColor: slateBlueLegendFillColour,
-        //   borderColor: slateBlueLineColour,
-        //   borderCapStyle: "butt",
-        //   borderDash: [3, 3],
-        //   borderDashOffset: 0.0,
-        //   borderJoinStyle: "miter",
-        //   pointBorderColor: slateBlueLineColour,
-        //   pointBackgroundColor: "#fff",
-        //   pointBorderWidth: 1,
-        //   pointHoverRadius: 5,
-        //   pointHoverBackgroundColor: slateBlueLineColour,
-        //   pointHoverBorderColor: greyLineColour,
-        //   pointHoverBorderWidth: 2,
-        //   pointRadius: 1,
-        //   pointHitRadius: 10,
-        //   data: pointsRunning2018
-        // },
-        // {
-        //   label: "2019-",
-        //   fill: false,
-        //   lineTension: 0.1,
-        //   backgroundColor: redLegendFillColour,
-        //   borderColor: redLineColour,
-        //   borderCapStyle: "butt",
-        //   borderDash: [],
-        //   borderDashOffset: 0.0,
-        //   borderJoinStyle: "miter",
-        //   pointBorderColor: redLineColour,
-        //   pointBackgroundColor: "#fff",
-        //   pointBorderWidth: 1,
-        //   pointHoverRadius: 5,
-        //   pointHoverBackgroundColor: redLineColour,
-        //   pointHoverBorderColor: greyLineColour,
-        //   pointHoverBorderWidth: 2,
-        //   pointRadius: 1,
-        //   pointHitRadius: 10,
-        //   data: pointsRunning2019
-        // }
-        // ,
-        // {
-        //   label: "2018",
-        //   fill: false,
-        //   lineTension: 0.1,
-        //   backgroundColor: purpleLegendFillColour,
-        //   borderColor: purpleLineColour,
-        //   borderCapStyle: "butt",
-        //   borderDash: [],
-        //   borderDashOffset: 0.0,
-        //   borderJoinStyle: "miter",
-        //   pointBorderColor: purpleLineColour,
-        //   pointBackgroundColor: "#fff",
-        //   pointBorderWidth: 1,
-        //   pointHoverRadius: 5,
-        //   pointHoverBackgroundColor: purpleLineColour,
-        //   pointHoverBorderColor: greyLineColour,
-        //   pointHoverBorderWidth: 2,
-        //   pointRadius: 1,
-        //   pointHitRadius: 10,
-        //   // data: pointsRunningCalendar2018,
-        //   data: pointsRunning2018
-        // }
-      ]
+      datasets: []
     };
 
     if (this.state.show2016) {
