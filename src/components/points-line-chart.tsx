@@ -653,6 +653,7 @@ class PointsLineChart extends React.Component<
           className="custom-control custom-checkbox"
           style={{ margin: "10px 30px 5px 25px" }}
         >
+          <label className="custom-control-label">Show: </label>{" "}
           <input
             type="checkbox"
             className="custom-control-input"
@@ -660,7 +661,7 @@ class PointsLineChart extends React.Component<
             onChange={() => this.handleShowTrendLines()}
           />
           <label className="custom-control-label" htmlFor="customCheck1">
-            Show Trend Lines
+            Trend Lines
           </label>
           <input
             type="checkbox"
@@ -671,7 +672,7 @@ class PointsLineChart extends React.Component<
             checked={this.state.show2016}
           />
           <label className="custom-control-label" htmlFor="show2016Checkbox">
-            Show 2016-
+            2016-
           </label>{" "}
           <input
             type="checkbox"
@@ -682,7 +683,7 @@ class PointsLineChart extends React.Component<
             checked={this.state.show2017}
           />
           <label className="custom-control-label" htmlFor="show2017Checkbox">
-            Show 2017-
+            2017-
           </label>{" "}
           <input
             type="checkbox"
@@ -693,7 +694,7 @@ class PointsLineChart extends React.Component<
             checked={this.state.show2018}
           />
           <label className="custom-control-label" htmlFor="show2018Checkbox">
-            Show 2018-
+            2018-
           </label>{" "}
           <input
             type="checkbox"
@@ -704,7 +705,7 @@ class PointsLineChart extends React.Component<
             checked={this.state.show2019}
           />
           <label className="custom-control-label" htmlFor="show2019Checkbox">
-            Show 2019-
+            2019-
           </label>{" "}
         </div>
 
