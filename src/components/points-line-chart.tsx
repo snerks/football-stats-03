@@ -294,7 +294,7 @@ class PointsLineChart extends React.Component<
       1, // 1-1 Birmingham (A)
       3, // 2-0 QPR (H)
       3, // 1-2 Derby (A)
-      3 // 1-2 Hull (A)
+      3  // 1-2 Hull (A)
     ];
 
     const pointsRunning2019: number[] = [];
