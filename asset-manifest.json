@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/football-stats-03/static/css/main.19393e92.chunk.css",
-    "main.js": "/football-stats-03/static/js/main.4e3941aa.chunk.js",
-    "main.js.map": "/football-stats-03/static/js/main.4e3941aa.chunk.js.map",
+    "main.js": "/football-stats-03/static/js/main.19029c03.chunk.js",
+    "main.js.map": "/football-stats-03/static/js/main.19029c03.chunk.js.map",
     "runtime~main.js": "/football-stats-03/static/js/runtime~main.8d9b25ef.js",
     "runtime~main.js.map": "/football-stats-03/static/js/runtime~main.8d9b25ef.js.map",
     "static/js/2.99572be3.chunk.js": "/football-stats-03/static/js/2.99572be3.chunk.js",
     "static/js/2.99572be3.chunk.js.map": "/football-stats-03/static/js/2.99572be3.chunk.js.map",
     "index.html": "/football-stats-03/index.html",
-    "precache-manifest.af40f78ebf74c8661a1a36b79a831212.js": "/football-stats-03/precache-manifest.af40f78ebf74c8661a1a36b79a831212.js",
+    "precache-manifest.1a4dfea2299fd4a32129b5c9fab7a583.js": "/football-stats-03/precache-manifest.1a4dfea2299fd4a32129b5c9fab7a583.js",
     "service-worker.js": "/football-stats-03/service-worker.js",
     "static/css/main.19393e92.chunk.css.map": "/football-stats-03/static/css/main.19393e92.chunk.css.map"
   }
