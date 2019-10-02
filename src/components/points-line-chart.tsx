@@ -2,10 +2,14 @@ import * as React from "react";
 
 import { Line, ChartData } from "react-chartjs-2";
 import * as chartjs from "chart.js";
+import { points2019 } from "./points2019";
+import { points2016 } from "./points2016";
+import { points2017 } from "./points2017";
+import { points2018 } from "./points2018";
 
-export interface PointsLineChartProps {}
+interface PointsLineChartProps {}
 
-export interface PointsLineChartState {
+interface PointsLineChartState {
   showTrendLines: boolean;
 
   show2016: boolean;
@@ -103,60 +107,6 @@ class PointsLineChart extends React.Component<
     const orangeLineColour = `rgba(${orangeRgba}, 1)`;
     const orangeLegendFillColour = `rgba(${orangeRgba}, 0.4)`;
 
-    const points2016: number[] = [
-      0,
-      3,
-      3,
-      0,
-      0,
-      3,
-      1,
-      0,
-      3,
-      1,
-      3, // 24 Sep
-
-      3,
-      3,
-      0,
-      0,
-      3,
-      1,
-      0,
-      0,
-      0,
-      3, // 3 Dec
-
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      1,
-      3, // 4 Feb 2017
-
-      1,
-      0,
-      0,
-      1,
-      0,
-      1,
-      1,
-      3,
-      3,
-      0, // 4 Apr 2017
-
-      3,
-      3,
-      1,
-      3,
-      3,
-      0
-    ];
-
     const pointsRunning2016: number[] = [];
 
     for (let index = 0; index < points2016.length; index++) {
@@ -166,57 +116,6 @@ class PointsLineChart extends React.Component<
 
       pointsRunning2016.push(nextElement);
     }
-
-    const points2017: number[] = [
-      0,
-      3,
-      0,
-      1,
-      1,
-      1,
-      3,
-      1,
-      3,
-      1,
-      3, // 26 Sep
-      3,
-      1,
-      0,
-      3,
-      3,
-      3,
-      1,
-      0,
-      3,
-      3, // 3 Dec
-      3,
-      3,
-      1,
-      3,
-      0, // 30 Dec
-
-      0,
-      0,
-      1,
-      3,
-      0, // 2 Feb 2018
-      1,
-      1,
-      1,
-      0,
-      3,
-      0,
-      1,
-      3,
-      1,
-      0, // 2 Apr 2018
-      0,
-      3,
-      0,
-      1,
-      1,
-      0
-    ];
 
     const pointsRunning2017: number[] = [];
 
@@ -228,56 +127,6 @@ class PointsLineChart extends React.Component<
       pointsRunning2017.push(nextElement);
     }
 
-    const points2018: number[] = [
-      0,
-      1,
-      1,
-      0,
-      3,
-      3,
-      3,
-      3,
-      0,
-      0,
-      1, // 28 Sep
-      1,
-      0,
-      3,
-      3,
-      0,
-      0, // 03 Nov
-      0,
-      0,
-      3,
-      1,
-      3, // 08 Dec
-      1,
-      1,
-      1,
-      3, // 29 Dec
-      3,
-      3,
-      3,
-      3,
-      3, // 09 Feb
-      3,
-      0,
-      0,
-      1,
-      0,
-      1,
-      3, // 30 Mar
-      3,
-      1,
-      3,
-      0,
-      1,
-      0,
-      0,
-      3,
-      1
-    ];
-
     const pointsRunning2018: number[] = [];
 
     for (let index = 0; index < points2018.length; index++) {
@@ -287,19 +136,6 @@ class PointsLineChart extends React.Component<
 
       pointsRunning2018.push(nextElement);
     }
-
-    const points2019: number[] = [
-      0, // Dummy 0th result
-      0, // 0-2 Leeds (H)
-      1, // 1-1 Birmingham (A)
-      3, // 2-0 QPR (H)
-      3, // 1-2 Derby (A)
-      3, // 1-2 Hull (A)
-      1, // 2-2 Middlesbrough (H)
-      3, // 1-2 Stoke (A)
-      1, // 0-0 Swansea (H)
-      1, // 3-3 Preston (A)
-    ];
 
     const pointsRunning2019: number[] = [];
 
