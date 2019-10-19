@@ -10,5 +10,6 @@ export const points2019: number[] = [
   1, // 0-0 Swansea (H)
   1, // 3-3 Preston (A)
   1, // 1-1 Brentford (A)
-  3 // 1-0 Reading (H)
+  3, // 1-0 Reading (H)
+  0 // 0-3 Luton (A)
 ];
