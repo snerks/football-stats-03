@@ -16,5 +16,6 @@ export const points2019: number[] = [
   1, // 2-2 Wigan (H)
   1, // 2-2 Barnsley (A)
   3, // 0-1 Cardiff (A)
-  1 // 0-0 Nottingham Forest (H)
+  1, // 0-0 Nottingham Forest (H)
+  0 // 4-1 West Bromich Albion (A)
 ];
