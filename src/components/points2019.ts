@@ -20,5 +20,6 @@ export const points2019: number[] = [
   0, // 4-1 West Bromich Albion (A)
   3, // 5-2 Huddersfield (H)
   3, // 1-2 Fulham (A)
-  0 // 1-2 Milwall (H)
+  0, // 1-2 Milwall (H)
+  0 // 0-2 Blackburn (H)
 ];
