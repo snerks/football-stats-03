@@ -21,5 +21,8 @@ export const points2019: number[] = [
   3, // 5-2 Huddersfield (H)
   3, // 1-2 Fulham (A)
   0, // 1-2 Milwall (H)
-  0 // 0-2 Blackburn (H)
+  0, // 0-2 Blackburn (H)
+  0, // 1-0 Sheffield Wednesday (A)
+  0, // 3-2 Charlton (A)
+  3 // 3-0 Luton (H)
 ];
