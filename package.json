@@ -11,6 +11,7 @@
     "chart.js": "^2.8.0",
     "gh-pages": "^2.1.1",
     "react": "^16.9.0",
+    "react-app-polyfill": "^1.0.5",
     "react-chartjs-2": "^2.7.6",
     "react-dom": "^16.9.0",
     "react-scripts": "3.1.0",
@@ -31,12 +32,14 @@
     "production": [
       ">0.2%",
       "not dead",
-      "not op_mini all"
+      "not op_mini all",
+      "ie 11"
     ],
     "development": [
       "last 1 chrome version",
       "last 1 firefox version",
-      "last 1 safari version"
+      "last 1 safari version",
+      "ie 11"
     ]
   },
   "homepage": "https://snerks.github.io/football-stats-03"
