@@ -25,5 +25,6 @@ export const points2019: number[] = [
   0, // 1-0 Sheffield Wednesday (A)
   0, // 3-2 Charlton (A)
   3, // 3-0 Luton (H)
-  0 // 0-4 Brentford (H)
+  0, // 0-4 Brentford (H)
+  3, // 0-2 Wigan (A)
 ];
