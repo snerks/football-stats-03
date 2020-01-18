@@ -27,4 +27,5 @@ export const points2019: number[] = [
   3, // 3-0 Luton (H)
   0, // 0-4 Brentford (H)
   3, // 0-2 Wigan (A)
+  3 // 1-0 Barnsley (H)
 ];
