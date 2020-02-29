@@ -34,5 +34,6 @@ export const points2019: number[] = [
   3, // 3-2 Derby (H)
   0, // 1-0 Leeds (A)
   0, // 0-3 West Bromich Albion (H)
-  0 // 2-1 Huddersfield (A)
+  0, // 2-1 Huddersfield (A)
+  1 // 1-1 Millwall (A)
 ];
