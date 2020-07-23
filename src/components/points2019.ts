@@ -43,4 +43,7 @@ export const points2019: number[] = [
   0, // 0-1 Cardiff (H)
   3, // 2-1 Hull (H)
   3, // 1-3 Middlesbrough (A)
+  1, // 1-1 Stoke (H)
+  0, // 1-0 Swansea (A)
+  1, // 1-1 Preston (H)
 ];
