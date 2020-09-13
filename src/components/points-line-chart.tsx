@@ -6,8 +6,9 @@ import { points2019 } from "./points2019";
 import { points2016 } from "./points2016";
 import { points2017 } from "./points2017";
 import { points2018 } from "./points2018";
+import { points2020 } from "./points2020";
 
-interface PointsLineChartProps {}
+interface PointsLineChartProps { }
 
 interface PointsLineChartState {
   showTrendLines: boolean;
@@ -16,19 +17,21 @@ interface PointsLineChartState {
   show2017: boolean;
   show2018: boolean;
   show2019: boolean;
+  show2020: boolean;
 }
 
 class PointsLineChart extends React.Component<
   PointsLineChartProps,
   PointsLineChartState
-> {
+  > {
   state = {
     showTrendLines: false,
 
     show2016: false,
     show2017: false,
-    show2018: true,
-    show2019: true
+    show2018: false,
+    show2019: true,
+    show2020: true
   };
 
   handleShowTrendLines = () => {
@@ -71,6 +74,15 @@ class PointsLineChart extends React.Component<
     this.setState(prevState => {
       const nextState = { ...prevState };
       nextState.show2019 = !prevState.show2019;
+
+      return nextState;
+    });
+  };
+
+  handleShow2020 = () => {
+    this.setState(prevState => {
+      const nextState = { ...prevState };
+      nextState.show2020 = !prevState.show2020;
 
       return nextState;
     });
@@ -147,6 +159,16 @@ class PointsLineChart extends React.Component<
       pointsRunning2019.push(nextElement);
     }
 
+    const pointsRunning2020: number[] = [];
+
+    for (let index = 0; index < points2020.length; index++) {
+      const runningTotal = index === 0 ? 0 : pointsRunning2020[index - 1];
+
+      const nextElement = runningTotal + points2020[index];
+
+      pointsRunning2020.push(nextElement);
+    }
+
     const dataPointCount = pointsRunning2018.length;
 
     const labels: string[] = [];
@@ -161,7 +183,7 @@ class PointsLineChart extends React.Component<
           gameNumber === 1 ||
           gameNumber === 23 ||
           gameNumber === 46) &&
-        gameNumber !== 45
+          gameNumber !== 45
           ? gameNumber.toString(10)
           : "";
 
@@ -260,10 +282,62 @@ class PointsLineChart extends React.Component<
       }
     }
 
+    // if (this.state.show2019) {
+    //   if (chartData.datasets) {
+    //     chartData.datasets.push({
+    //       label: "2019-",
+    //       fill: false,
+    //       lineTension: 0.1,
+    //       backgroundColor: redLegendFillColour,
+    //       borderColor: redLineColour,
+    //       borderCapStyle: "butt",
+    //       borderDash: [],
+    //       borderDashOffset: 0.0,
+    //       borderJoinStyle: "miter",
+    //       pointBorderColor: redLineColour,
+    //       pointBackgroundColor: "#fff",
+    //       pointBorderWidth: 1,
+    //       pointHoverRadius: 5,
+    //       pointHoverBackgroundColor: redLineColour,
+    //       pointHoverBorderColor: greyLineColour,
+    //       pointHoverBorderWidth: 2,
+    //       pointRadius: 1,
+    //       pointHitRadius: 10,
+    //       data: pointsRunning2019
+    //     });
+    //   }
+    // }
+
     if (this.state.show2019) {
       if (chartData.datasets) {
         chartData.datasets.push({
           label: "2019-",
+          fill: false,
+          lineTension: 0.1,
+          backgroundColor: slateBlueLegendFillColour,
+          borderColor: slateBlueLineColour,
+          borderCapStyle: "butt",
+          borderDash: [],
+          borderDashOffset: 0.0,
+          borderJoinStyle: "miter",
+          pointBorderColor: slateBlueLineColour,
+          pointBackgroundColor: "#fff",
+          pointBorderWidth: 1,
+          pointHoverRadius: 5,
+          pointHoverBackgroundColor: slateBlueLineColour,
+          pointHoverBorderColor: greyLineColour,
+          pointHoverBorderWidth: 2,
+          pointRadius: 1,
+          pointHitRadius: 10,
+          data: pointsRunning2019
+        });
+      }
+    }
+
+    if (this.state.show2020) {
+      if (chartData.datasets) {
+        chartData.datasets.push({
+          label: "2020-",
           fill: false,
           lineTension: 0.1,
           backgroundColor: redLegendFillColour,
@@ -281,7 +355,7 @@ class PointsLineChart extends React.Component<
           pointHoverBorderWidth: 2,
           pointRadius: 1,
           pointHitRadius: 10,
-          data: pointsRunning2019
+          data: pointsRunning2020
         });
       }
     }
@@ -440,6 +514,18 @@ class PointsLineChart extends React.Component<
           />
           <label className="custom-control-label" htmlFor="show2019Checkbox">
             2019-
+          </label>{" "}
+
+          <input
+            type="checkbox"
+            className="custom-control-input"
+            id="show2020Checkbox"
+            onChange={() => this.handleShow2020()}
+            style={{ marginLeft: "10px" }}
+            checked={this.state.show2020}
+          />
+          <label className="custom-control-label" htmlFor="show2020Checkbox">
+            2020-
           </label>{" "}
         </div>
 
