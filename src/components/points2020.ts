@@ -3,4 +3,5 @@ export const points2020: number[] = [
   3, // 2-1 Coventry City (H)
   3, // 0-2 Stoke City (A)
   3, // 2-0 Sheffield Wednesday (H)
+  3, // 1-2 Nottingham Forest (A)
 ];
