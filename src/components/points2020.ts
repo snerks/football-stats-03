@@ -7,4 +7,5 @@ export const points2020: number[] = [
   1, // 2-2 Barnsley (A)
   0, // 0-1 Middlesbrough (H)
   1, // 1-1 Swansea (H)
+  0, // 0-1 Bournemouth (A)
 ];
