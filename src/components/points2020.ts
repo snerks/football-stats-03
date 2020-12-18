@@ -19,4 +19,5 @@ export const points2020: number[] = [
   3, // 1-0 Blackburn (H)
   0, // 2-0 Rotherham (A)
   0, // 0-2 Millwall (H)
+  0, // 1-0 Preston (A)
 ];
