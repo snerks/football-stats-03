@@ -21,4 +21,5 @@ export const points2020: number[] = [
   0, // 0-2 Millwall (H)
   0, // 1-0 Preston (A)
   3, // 2-1 Wycombe (H)
+  0, // 2-1 Luton (A)
 ];
