@@ -23,4 +23,5 @@ export const points2020: number[] = [
   3, // 2-1 Wycombe (H)
   0, // 2-1 Luton (A)
   3, // 2-0 Preston (H)
+  0, // 2-0 Norwich (A)
 ];
