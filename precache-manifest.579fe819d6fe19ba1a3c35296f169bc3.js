@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "f006ce47512ef4f3cf52cda33bef2a04",
+    "revision": "21ba84a03049523de26789ee7cd2395f",
     "url": "/football-stats-03/index.html"
   },
   {
-    "revision": "9c4b8d97d2bcf075bb9b",
+    "revision": "7fc6e63648bb49b2165d",
     "url": "/football-stats-03/static/css/main.19393e92.chunk.css"
   },
   {
@@ -12,8 +12,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/football-stats-03/static/js/2.2dc8472e.chunk.js"
   },
   {
-    "revision": "9c4b8d97d2bcf075bb9b",
-    "url": "/football-stats-03/static/js/main.f4b296f3.chunk.js"
+    "revision": "7fc6e63648bb49b2165d",
+    "url": "/football-stats-03/static/js/main.0b2ce33f.chunk.js"
   },
   {
     "revision": "b84644f0046a4aad93a3",
