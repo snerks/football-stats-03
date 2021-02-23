@@ -31,5 +31,10 @@ export const points2020: number[] = [
   0, // 0-2 Cardiff (H)
   0, // 6-0 Watford (A)
   0, // 0-2 Reading (H)
+
+     // Holden sacked before this match
   0, // 0-1 Barnsley (H)
+
+     // Pearson appointed
+  3, // 1-3 Middlesbrough (A)
 ];
