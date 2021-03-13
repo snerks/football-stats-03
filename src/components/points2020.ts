@@ -40,4 +40,5 @@ export const points2020: number[] = [
   3, // 1-3 Swansea (A)
   0, // 1-2 Bournemouth (H)
   0, // 0-2 QPR (H)
+  3, // 0-3 Birmingham (A)
 ];
