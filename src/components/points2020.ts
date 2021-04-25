@@ -48,4 +48,5 @@ export const points2020: number[] = [
   1, // 0-0 Nottingham Forest (H)
   1, // 1-1 Sheffield Wednesday (A)
   0, // 2-1 Wycombe (A)
+  0, // 2-3 Luton (H)
 ];
