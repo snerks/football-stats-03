@@ -7,7 +7,7 @@ import { points2016 } from "./points2016";
 import { points2017 } from "./points2017";
 import { points2018 } from "./points2018";
 import { points2020 } from "./points2020";
-
+import { points2021 } from "./points2021";
 interface PointsLineChartProps { }
 
 interface PointsLineChartState {
@@ -18,12 +18,13 @@ interface PointsLineChartState {
   show2018: boolean;
   show2019: boolean;
   show2020: boolean;
+  show2021: boolean;
 }
 
 class PointsLineChart extends React.Component<
   PointsLineChartProps,
   PointsLineChartState
-  > {
+> {
   state = {
     showTrendLines: false,
 
@@ -31,7 +32,8 @@ class PointsLineChart extends React.Component<
     show2017: false,
     show2018: false,
     show2019: true,
-    show2020: true
+    show2020: true,
+    show2021: true
   };
 
   handleShowTrendLines = () => {
@@ -83,6 +85,15 @@ class PointsLineChart extends React.Component<
     this.setState(prevState => {
       const nextState = { ...prevState };
       nextState.show2020 = !prevState.show2020;
+
+      return nextState;
+    });
+  };
+
+  handleShow2021 = () => {
+    this.setState(prevState => {
+      const nextState = { ...prevState };
+      nextState.show2021 = !prevState.show2021;
 
       return nextState;
     });
@@ -167,6 +178,16 @@ class PointsLineChart extends React.Component<
       const nextElement = runningTotal + points2020[index];
 
       pointsRunning2020.push(nextElement);
+    }
+
+    const pointsRunning2021: number[] = [];
+
+    for (let index = 0; index < points2021.length; index++) {
+      const runningTotal = index === 0 ? 0 : pointsRunning2021[index - 1];
+
+      const nextElement = runningTotal + points2021[index];
+
+      pointsRunning2021.push(nextElement);
     }
 
     const dataPointCount = pointsRunning2018.length;
@@ -340,6 +361,34 @@ class PointsLineChart extends React.Component<
           label: "2020-",
           fill: false,
           lineTension: 0.1,
+
+          backgroundColor: purpleLegendFillColour,
+          borderColor: purpleLineColour,
+
+          borderCapStyle: "butt",
+          borderDash: [3, 3],
+          borderDashOffset: 0.0,
+          borderJoinStyle: "miter",
+          pointBorderColor: purpleLineColour,
+          pointBackgroundColor: "#fff",
+          pointBorderWidth: 1,
+          pointHoverRadius: 5,
+          pointHoverBackgroundColor: purpleLineColour,
+          pointHoverBorderColor: greyLineColour,
+          pointHoverBorderWidth: 2,
+          pointRadius: 1,
+          pointHitRadius: 10,
+          data: pointsRunning2020
+        });
+      }
+    }
+
+    if (this.state.show2021) {
+      if (chartData.datasets) {
+        chartData.datasets.push({
+          label: "2021-",
+          fill: false,
+          lineTension: 0.1,
           backgroundColor: redLegendFillColour,
           borderColor: redLineColour,
           borderCapStyle: "butt",
@@ -355,7 +404,7 @@ class PointsLineChart extends React.Component<
           pointHoverBorderWidth: 2,
           pointRadius: 1,
           pointHitRadius: 10,
-          data: pointsRunning2020
+          data: pointsRunning2021
         });
       }
     }
@@ -526,6 +575,19 @@ class PointsLineChart extends React.Component<
           />
           <label className="custom-control-label" htmlFor="show2020Checkbox">
             2020-
+          </label>{" "}
+
+
+          <input
+            type="checkbox"
+            className="custom-control-input"
+            id="show2021Checkbox"
+            onChange={() => this.handleShow2021()}
+            style={{ marginLeft: "10px" }}
+            checked={this.state.show2021}
+          />
+          <label className="custom-control-label" htmlFor="show2021Checkbox">
+            2021-
           </label>{" "}
         </div>
 
